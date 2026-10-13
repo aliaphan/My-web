@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alia Phan | Accounting · Business Intelligence · Finance</title>
+  <meta name="description" content="Portfolio of Alia Phan, an Accounting, Business Intelligence, and Business Finance student at Augustana College (May 2027, CPA eligible).">
+  <meta property="og:title" content="Alia Phan | Accounting · Business Intelligence · Finance">
+  <meta property="og:description" content="Every number tells a story. I make sure it’s the right one.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1F1517">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts from Google Fonts: Libre Baskerville (headings) + Jost (body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&family=Jost:wght@300..600&display=swap">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Tells the stylesheet that JavaScript is on, so scroll animations can run -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================== NAVIGATION ============================== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav__mobile-only"><a href="assets/files/Alia-Phan-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a></li>
+      </ul>
+      <a class="brand" href="#home">Alia <em>Phan</em></a>
+      <div class="nav__meta">
+        <a class="nav__resume" href="assets/files/Alia-Phan-Resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="home">
+      <span class="hero__oval" aria-hidden="true"></span>
+
+      <div class="hero__center">
+        <h1 class="hero__title">It’s <em>Alia</em>, here</h1>
+        <p class="hero__tagline">Every number tells a story. I make sure it’s the right one.</p>
+        <p class="hero__meta">Aspiring CPA · Accounting, Business Intelligence &amp; Finance</p>
+        <p class="hero__meta"><span class="hero__item"><span class="hero__recent">Recently:</span> Sponsored Programs Intern at the Research Foundation for SUNY ·</span> <span class="hero__item">2nd place, CFA Institute Research Challenge</span></p>
+
+        <!-- Icon links. To change one, edit its href="..." -->
+        <ul class="hero__links">
+          <li>
+            <a class="icon-link" href="https://www.linkedin.com/in/alia-phan" target="_blank" rel="noopener">
+              <span class="icon-link__circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="5" r="2.2"/><rect x="3" y="9" width="4" height="12" rx="0.5"/><path d="M10 9h3.8v1.7c.6-1.1 2-2 4-2 3.6 0 4.2 2.4 4.2 5.4V21h-4v-6c0-1.4-.1-3.2-2-3.2s-2.2 1.5-2.2 3.1V21H10z"/></svg>
+              </span>
+              <span class="icon-link__label">LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a class="icon-link" href="mailto:phanthaolinh05@gmail.com">
+              <span class="icon-link__circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+              </span>
+              <span class="icon-link__label">Email</span>
+            </a>
+          </li>
+          <li>
+            <a class="icon-link" href="assets/files/Alia-Phan-Resume.pdf" target="_blank" rel="noopener">
+              <span class="icon-link__circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+              </span>
+              <span class="icon-link__label">Résumé</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <img class="hero__flower" src="assets/images/flower-hibiscus.png" alt="" width="416" height="404">
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-head__ghost" aria-hidden="true">About</span>
+          <h2>A little <em>about me</em></h2>
+        </header>
+
+        <div class="about__grid">
+          <figure class="about__photo reveal">
+            <img src="assets/images/alia-phan.jpg" alt="Portrait of Alia Phan" width="900" height="1200" loading="lazy">
+            <img class="about__flower" src="assets/images/flower-dahlia.png" alt="" width="359" height="346" loading="lazy">
+          </figure>
+
+          <!-- Words inside <strong>...</strong> show in bold -->
+          <div class="about__text">
+            <p class="about__intro reveal">
+              I'm a senior at <strong>Augustana College</strong> studying <strong>Accounting, Business Intelligence, and Business Finance</strong>. I graduate in <strong>May 2027</strong>, I'm <em>CPA eligible</em>, and I'm working toward CPA licensure.
+            </p>
+            <div class="about__body reveal">
+              <p>
+                I like the point where <strong>accuracy meets insight</strong>: reconciling the details until the numbers are right, then using analysis to explain what they mean. At the <strong>Research Foundation for SUNY</strong>, I spent two years in <strong>Oracle ERP</strong> across accounts payable and grant administration. In class and in competitions, I've built <strong>DCF valuations, credit analyses, and equity research</strong> recommendations.
+              </p>
+              <p>
+                Outside of work, you'll find me behind the counter at our campus coffee shop, a job I've held since my first year. My Vietnamese background shaped how I <strong>work across cultures and teams</strong>.
+              </p>
+              <p>
+                I'm seeking full-time roles in <strong>audit, tax, advisory, and corporate finance</strong>. <strong>Chicago</strong> is my top choice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== EXPERIENCE ============================== -->
+    <section class="section section--tint" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-head__ghost" aria-hidden="true">Experience</span>
+          <h2>Work <em>experience</em></h2>
+        </header>
+
+        <!-- Research Foundation for SUNY -->
+        <article class="entry reveal">
+          <div class="entry__meta">
+            <p class="entry__num">01</p>
+            <p class="entry__date">Sep 2024 – Sep 2026</p>
+          </div>
+          <div class="entry__main">
+            <h3 class="entry__org">Research Foundation for SUNY</h3>
+            <p class="entry__role">Financial Accounting Intern, Sponsored Programs</p>
+            <div class="entry__body">
+              <div>
+                <h4 class="mini-label">What I did</h4>
+                <ul class="bullets">
+                  <li>Processed and reconciled invoices, purchase orders, and supplier records in Oracle ERP, using daily audits to catch errors before payment</li>
+                  <li>Supported pre-award grant administration</li>
+                  <li>Built Excel reconciliation and audit workbooks for travel reimbursements, purchasing-card activity, tuition reimbursements, and grant budgets</li>
+                  <li>Standardized records across Accounts Payable, Purchasing, and Sponsored Programs</li>
+                  <li>Led weekly cross-functional process-improvement meetings and built shared templates for onboarding</li>
+                </ul>
+              </div>
+              <div class="results">
+                <h4 class="mini-label">Results</h4>
+                <ul class="results__list">
+                  <li><strong>700+</strong> records reconciled each month at 98% accuracy, cutting AP rework by about 5 hours a month</li>
+                  <li><strong>15%</strong> increase in payment accuracy, which reduced vendor disputes</li>
+                  <li><strong>30%</strong> faster document retrieval, supporting month-end close and audit readiness</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Summer Conference Assistant -->
+        <article class="entry reveal">
+          <div class="entry__meta">
+            <p class="entry__num">02</p>
+            <p class="entry__date">May 2025 – Aug 2025</p>
+          </div>
+          <div class="entry__main">
+            <h3 class="entry__org">Augustana College</h3>
+            <p class="entry__role">Summer Conference Assistant</p>
+            <div class="entry__body">
+              <div>
+                <h4 class="mini-label">What I did</h4>
+                <p>Ran check-in, check-out, and logistics for summer conferences. I supported guests by email, phone, and in person, and resolved facility issues and last-minute requests.</p>
+              </div>
+              <div class="results">
+                <h4 class="mini-label">Results</h4>
+                <p>Supported 1,000+ guests across 14 conferences. Improved check-in efficiency by 20% and resolved 50+ facility issues without disrupting event schedules.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Campus employment -->
+        <article class="entry reveal">
+          <div class="entry__meta">
+            <p class="entry__num">03</p>
+            <p class="entry__date">Sep 2023 – Present</p>
+          </div>
+          <div class="entry__main">
+            <h3 class="entry__org">Augustana College</h3>
+            <p class="entry__role">Campus Employment</p>
+            <ul class="role-list">
+              <li><span>Barista at The Brew</span><span>Oct 2023 – Present</span></li>
+              <li><span>Concessions team member</span><span>Dec 2023 – Present</span></li>
+              <li><span>Dining services cashier</span><span>Sep 2023 – Mar 2024</span></li>
+            </ul>
+            <div class="entry__body">
+              <div>
+                <h4 class="mini-label">What I did</h4>
+                <p>Served customers, handled cash, and worked every station in dining services, from cooking to serving.</p>
+              </div>
+              <div class="results">
+                <h4 class="mini-label">Result</h4>
+                <p>Held campus jobs continuously since my first year, working 10+ hours a week alongside a full course load.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================== COMPETITIONS & PROGRAMS ============================== -->
+    <section class="section" id="competitions">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-head__ghost" aria-hidden="true">Programs</span>
+          <h2>Competitions <em>&amp; programs</em></h2>
+        </header>
+
+        <!-- CFA Institute Research Challenge (featured) -->
+        <article class="feature reveal">
+          <div class="feature__media">
+            <img src="assets/images/cfa-team.jpg" alt="Alia and three teammates in suits in front of their O'Reilly Automotive title slide at the CFA Institute Research Challenge" width="1200" height="960" loading="lazy">
+            <span class="feature__big" aria-hidden="true">2<sup>nd</sup></span>
+          </div>
+          <div class="feature__body">
+            <p class="label">Oct 2025 – Feb 2026 · Hosted by CFA Society Iowa</p>
+            <h3 class="feature__title">CFA Institute Research Challenge: <em>O'Reilly Automotive (ORLY)</em></h3>
+            <p class="feature__role">Industry and valuation lead, 4-person team</p>
+
+            <h4 class="mini-label">What I did</h4>
+            <p>Led our industry and competitive positioning analysis. Built relative valuation models (P/E, EV/EBITDA, P/S) against AutoZone, Genuine Parts, and Advance Auto Parts, and checked our financial data against Koyfin. Co-wrote the equity research report and presented it to CFA charterholders and portfolio managers.</p>
+
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>2nd of 9 universities at the Iowa Sub-Regional. Our BUY recommendation set a 12-month target of $117.34, 24.5% above the $94.25 price on Dec 9, 2025. The target came from a 2025–2029 DCF, cross-checked with Monte Carlo simulation and relative valuation.</p>
+            </div>
+
+            <div class="feature__actions">
+              <a class="btn btn--primary" href="assets/files/ORLY-Equity-Research-Report.pdf" target="_blank" rel="noopener">Research report <span aria-hidden="true">↗</span></a>
+              <a class="link-arrow" href="assets/files/ORLY-Final-Presentation.pdf" target="_blank" rel="noopener">Final presentation (PDF)</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Other competitions and programs -->
+        <div class="programs">
+          <article class="card reveal">
+            <p class="card__date">Sep 2023 – Present</p>
+            <h3 class="card__title">Student Investment Fund</h3>
+            <p class="card__role">Sector Analyst, Utilities</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>I build DCF and comparable-company analyses on utilities stocks and pitch buy/hold/sell recommendations to a student-managed fund. I also set up a cloud-based document system for the team.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Covered 3+ utilities equities for a fund with about $282K in assets. The document system cut version-control errors and improved team efficiency by about 10%.</p>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <p class="card__date">Aug 2025 – Present</p>
+            <h3 class="card__title">Innovation Competition</h3>
+            <p class="card__role">Finance Research Analyst</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Built a data-backed product launch strategy using Nielsen market data and competitor analysis, and delivered the team's financial analysis under tight deadlines.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Earned recognition from the judges.</p>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <p class="card__date">Mar 2026 – Present · Virtual</p>
+            <h3 class="card__title">EY Expedition Program</h3>
+            <p class="card__role">Selected participant (top 10%)</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Learned how EY approaches audit and assurance work, advisory services, and client communication.</p>
+          </article>
+
+          <article class="card reveal">
+            <p class="card__date">2025 · Virtual</p>
+            <h3 class="card__title">Goldman Sachs 2025 Virtual Insight Series</h3>
+            <p class="card__role">Participant</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Earned a Certificate of Achievement (June 2025).</p>
+            </div>
+            <a class="link-arrow card__link" href="assets/files/2025-Virtual-Insight-Series.pdf" target="_blank" rel="noopener">Certificate (PDF)</a>
+          </article>
+        </div>
+
+        <!-- Recognition -->
+        <div class="recognition reveal">
+          <h3 class="mini-label">Recognition</h3>
+          <ul class="recognition__list">
+            <li>Dean's List</li>
+            <li>GPA 3.74</li>
+            <li>Academic Merit Scholarship</li>
+            <li>J. Ingemanson Scholarship</li>
+            <li>Friends of Accounting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section section--tint" id="projects">
+      <div class="container">
+        <header class="section-head section-head--with-art reveal">
+          <span class="section-head__ghost" aria-hidden="true">Projects</span>
+          <h2>Selected <em>projects</em></h2>
+          <p class="section-head__intro">Class projects, cases, and research papers. Where a document is available, the link opens the full PDF.</p>
+          <img class="section-head__art" src="assets/images/collage-jar.png" alt="" width="368" height="435" loading="lazy">
+        </header>
+
+        <div class="projects">
+          <article class="project reveal">
+            <p class="project__top"><span class="project__num">01</span><span>Equity research</span></p>
+            <h3 class="project__title">Meta Platforms <em>(META)</em></h3>
+            <p class="project__role">Valuation lead and presenter, 4-person team · BUSN 334 class project · Sep 2026</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Built the leverage analysis, DCF (with WACC, free cash flow, and working capital forecasts), and peer multiples valuation. I presented the valuation and our recommendation in the team's equity research presentation.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>SELL recommendation with a $530 target price, 28% below the $738.79 share price as of Sep 10, 2026. The target blends the DCF ($269.50 per share) and multiples ($789.96 per share) 50/50. Our thesis: about $137B of planned 2026 AI capex pushes free cash flow below zero, so the price assumes the AI bet pays off fast.</p>
+            </div>
+            <a class="link-arrow project__link" href="assets/files/META-Equity-Research-Slides.pdf" target="_blank" rel="noopener" aria-label="Meta Platforms equity research slides (PDF)">Slides (PDF)</a>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__top"><span class="project__num">02</span><span>Commercial credit analysis</span></p>
+            <h3 class="project__title">Polaris <em>Inc.</em></h3>
+            <p class="project__role">Individual analyst · Commercial banking case · Oct 2025</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Used Polaris's 10-K and earnings presentation to decide whether a lender should extend more debt. I built a credit workbook (EBITDA, leverage, fixed-charge coverage) and a credit presentation covering the business, its competitive advantages, risks, and financial trends.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Recommended conditional approval of a secured credit line, with quarterly covenant tests, inventory monitoring, and dividend limits. Key metrics: leverage 1.90x, liquidity $1.1B, and a fixed-charge coverage ratio of 0.26x, well below the 1.0x–1.25x threshold.</p>
+            </div>
+            <a class="link-arrow project__link" href="assets/files/Polaris-Credit-Analysis.pdf" target="_blank" rel="noopener" aria-label="Polaris credit analysis (PDF)">Credit analysis (PDF)</a>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__top"><span class="project__num">03</span><span>Tax research paper</span></p>
+            <h3 class="project__title">Cancellation of <em>Debt Income</em></h3>
+            <p class="project__role">Author · Tax Accounting · Nov 2025</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Researched how forgiven credit card debt becomes taxable income under IRC §61(a)(12) and §108. I designed the Tax-Optimal Debt Resolution (T.O.D.R.) Framework, which helps taxpayers avoid, minimize, or discharge Cancellation of Debt (COD) income.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Estimated that consumer debt settlements create about $2.88B of taxable COD income and $630M+ of federal tax each year.</p>
+            </div>
+            <a class="link-arrow project__link" href="assets/files/COD-Income-Tax-Paper.pdf" target="_blank" rel="noopener" aria-label="Cancellation of debt income tax paper (PDF)">Paper (PDF)</a>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__top"><span class="project__num">04</span><span>Tax return preparation</span></p>
+            <h3 class="project__title">Forms 1040 <em>and 1120</em></h3>
+            <p class="project__role">Preparer · Tax course project</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Prepared a Form 1040 for a fictional married couple with two dependents. It covers W-2 wages, Schedule C, Schedule E rental income, Schedule D capital gains, itemized deductions, and child credits. I also completed a Form 1120 for a fictional C corporation, reconciling book-to-tax differences, depreciation, charitable contribution limits, and NOL considerations.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Calculated full federal tax liability for both the individual and the corporate return.</p>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__top"><span class="project__num">05</span><span>Forensic investigation</span></p>
+            <h3 class="project__title">“Who Took <em>the Money?</em>”</h3>
+            <p class="project__role">Analyst · Auditing · May 2025</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Analyzed a $10,000 cash theft at a microbrewery with $3.2M in annual sales. I evaluated forensic interviews of four employees, scored each answer as truthful or evasive, and explained how non-confrontational techniques led to a confession.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Identified the employee responsible and traced $10,500 in total theft. I then laid out the internal control lessons.</p>
+            </div>
+            <a class="link-arrow project__link" href="assets/files/Who-Took-the-Money-Case-Analysis.pdf" target="_blank" rel="noopener" aria-label="Who Took the Money case analysis (PDF)">Case analysis (PDF)</a>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__top"><span class="project__num">06</span><span>Fraud case</span></p>
+            <h3 class="project__title">Rita Crundwell <em>(All the Queen's Horses)</em></h3>
+            <p class="project__role">Co-author · Group paper</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Analyzed how a city comptroller embezzled $53M+ from Dixon, Illinois over 22 years. She controlled the mail, check signing, and bank reconciliations, and redirected bank statements to herself.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Recommended five controls that would have prevented or caught the fraud: segregation of duties, independent audits, fraud risk assessments, whistleblower channels, and active oversight by city officials.</p>
+            </div>
+            <a class="link-arrow project__link" href="assets/files/Crundwell-Fraud-Case-Paper.pdf" target="_blank" rel="noopener" aria-label="Rita Crundwell fraud case paper (PDF)">Paper (PDF)</a>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__top"><span class="project__num">07</span><span>Managerial accounting</span></p>
+            <h3 class="project__title">Flexible Budget <em>Variance Analysis</em></h3>
+            <p class="project__role">Analyst · Managerial Accounting · Apr 2025</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Built a formula-driven master budget, flexible budget, and variance report in Excel, with IF-based flags and conditional formatting for management by exception. I then wrote a memo to the CFO with causes, recommendations, and charts.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Flagged three variances over the 10% threshold: direct labor ($4,150 unfavorable, 40.7%), advertising ($4,000 unfavorable, 40.0%), and variable overhead ($1,000 favorable, 16.8%).</p>
+            </div>
+            <a class="link-arrow project__link" href="assets/files/Variance-Analysis-Memo.pdf" target="_blank" rel="noopener" aria-label="Flexible budget variance analysis memo (PDF)">Memo (PDF)</a>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__top"><span class="project__num">08</span><span>Data analytics capstone</span></p>
+            <h3 class="project__title">Supply <em>Planning</em></h3>
+            <p class="project__role">Analyst · Data analytics course</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Used Excel, Power BI, and Tableau to analyze 200 supplier orders for a distributor. I applied descriptive statistics, regression, and 12-month forecasts to delivery delays and order costs.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>Recommended adding 41 days to the ordering cycle (the 95th percentile of delays, against a 15.4-day mean). Identified the slowest product and supplier, at about 16.6 days late each, and forecast delays falling 8.6% over the next year.</p>
+            </div>
+            <a class="link-arrow project__link" href="assets/files/Candy-Supply-Capstone-Presentation.pdf" target="_blank" rel="noopener" aria-label="Supply planning capstone presentation (PDF)">Presentation (PDF)</a>
+          </article>
+
+          <!-- OPTIONAL PROJECT, hidden for now. To show it: replace "WRITE ONE SPECIFIC
+               OUTCOME HERE" with a real result, then delete the word  hidden  on the next line. -->
+          <article class="project reveal" hidden>
+            <p class="project__top"><span class="project__num">09</span><span>Revenue recognition</span></p>
+            <h3 class="project__title">Revenue Recognition <em>Case (ASC 606)</em></h3>
+            <p class="project__role">Team member · ACCT 322 group presentation</p>
+            <h4 class="mini-label">What I did</h4>
+            <p>Applied the five-step ASC 606 revenue recognition model to a case and presented our analysis.</p>
+            <div class="results">
+              <h4 class="mini-label">Result</h4>
+              <p>WRITE ONE SPECIFIC OUTCOME HERE.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== EDUCATION & SKILLS ============================== -->
+    <section class="section" id="education">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-head__ghost" aria-hidden="true">Education</span>
+          <h2>Education <em>&amp; skills</em></h2>
+        </header>
+
+        <div class="education reveal">
+          <div class="education__school">
+            <h3 class="education__name">Augustana College</h3>
+            <p class="education__place">Rock Island, IL</p>
+          </div>
+          <div class="education__details">
+            <p class="education__degree">BA in Accounting, Business Intelligence, and Business Finance</p>
+            <ul class="education__facts">
+              <li>Expected May 2027</li>
+              <li>CPA eligible</li>
+              <li>GPA 3.74</li>
+              <li>Dean's List</li>
+            </ul>
+            <h4 class="mini-label">Relevant coursework</h4>
+            <ul class="chips">
+              <li>Intermediate Accounting</li>
+              <li>Auditing</li>
+              <li>Tax Accounting</li>
+              <li>Advanced Tax</li>
+              <li>Accounting Information Systems (ERP)</li>
+              <li>Financial Management</li>
+              <li>Security Analysis &amp; Portfolio Management</li>
+              <li>Business Analytics &amp; Regression</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="toolkit reveal">
+          <div class="toolkit__col">
+            <h3 class="block-title">Accounting</h3>
+            <ul class="plain-list">
+              <li>Account reconciliation</li>
+              <li>Accounts payable</li>
+              <li>Internal controls</li>
+              <li>Grant administration</li>
+              <li>GAAP</li>
+              <li>Variance analysis</li>
+              <li>Individual and corporate tax (1040, 1120)</li>
+            </ul>
+          </div>
+          <div class="toolkit__col">
+            <h3 class="block-title">Finance</h3>
+            <ul class="plain-list">
+              <li>DCF and comparable-company valuation</li>
+              <li>Three-statement modeling</li>
+              <li>Credit analysis (leverage, FCCR)</li>
+              <li>Equity research</li>
+            </ul>
+          </div>
+          <div class="toolkit__col">
+            <h3 class="block-title">Data and tools</h3>
+            <ul class="plain-list">
+              <li>Oracle ERP</li>
+              <li>Advanced Excel (reconciliations, audit workbooks, PivotTables, XLOOKUP)</li>
+              <li>Power BI</li>
+              <li>Tableau</li>
+              <li>Regression and forecasting</li>
+              <li>Visio · Adobe Acrobat · Canva</li>
+            </ul>
+          </div>
+          <div class="toolkit__col">
+            <h3 class="block-title">Certifications</h3>
+            <p class="toolkit__note">LinkedIn Learning</p>
+            <ul class="plain-list">
+              <li><a href="assets/files/LinkedIn-Learning-Excel-Essential-Training.pdf" target="_blank" rel="noopener">Excel Essential Training <span aria-hidden="true">↗</span></a></li>
+              <li><a href="assets/files/LinkedIn-Learning-Power-BI-Essential-Training.pdf" target="_blank" rel="noopener">Power BI Essential Training <span aria-hidden="true">↗</span></a></li>
+              <li><a href="assets/files/LinkedIn-Learning-Tableau-Essential-Training.pdf" target="_blank" rel="noopener">Tableau Essential Training <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="contact" id="contact">
+      <img class="contact__flower" src="assets/images/flower-rose.png" alt="" width="289" height="292" loading="lazy">
+
+      <div class="container contact__grid">
+        <div class="contact__intro reveal">
+          <h2>Let's <em>connect</em>.</h2>
+          <p class="contact__lede">I'm always glad to talk about accounting, analytics, and opportunities.</p>
+        </div>
+
+        <dl class="contact__list reveal">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:phanthaolinh05@gmail.com">phanthaolinh05@gmail.com</a></dd>
+          </div>
+          <div>
+            <dt>LinkedIn</dt>
+            <dd><a href="https://www.linkedin.com/in/alia-phan" target="_blank" rel="noopener">linkedin.com/in/alia-phan</a></dd>
+          </div>
+          <div>
+            <dt>Résumé</dt>
+            <dd><a href="assets/files/Alia-Phan-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="brand" href="#home">Alia <em>Phan</em></a>
+      <p>© <span id="year">2026</span> Alia Phan</p>
+      <a class="site-footer__top" href="#home">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>
