@@ -1,0 +1,233 @@
+/* Base styles and small pieces shared by several sections */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h2 em, h3 em { font-style: italic; }
+
+p { margin: 0 0 1em; }
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection { background: var(--accent); color: var(--on-accent); }
+
+.container {
+  width: min(100% - 2 * var(--gutter), var(--max));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.skip-link:focus { top: 1rem; }
+
+/* ---------- Labels ---------- */
+
+.label,
+.mini-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.mini-label {
+  margin: 0 0 0.6rem;
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+/* ---------- Buttons & links ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  min-height: 48px;
+  padding: 0.9em 1.7em;
+  border: 1px solid var(--accent);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.btn--primary { background: var(--accent); color: var(--on-accent); }
+.btn--primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+
+.link-arrow {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: underline;
+}
+.link-arrow::after { content: " ↗"; text-decoration: none; }
+.link-arrow:hover { color: var(--accent-hover); }
+
+/* ---------- Section headings ---------- */
+
+.section {
+  position: relative;
+  padding-block: var(--section-space);
+  overflow-x: clip;
+  isolation: isolate;
+}
+.section--tint { background: var(--bg-alt); }
+
+.section-head {
+  position: relative;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* Big faded word behind each heading */
+.section-head__ghost {
+  position: absolute;
+  top: 50%;
+  left: -0.06em;
+  z-index: -1;
+  transform: translateY(-58%);
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 16vw, 13rem);
+  font-style: italic;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.07;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.section-head h2 { font-size: clamp(2.6rem, 6vw, 4.75rem); }
+.section-head h2 em { color: var(--accent); }
+
+.section-head__intro {
+  max-width: 34rem;
+  margin: 1.25rem 0 0;
+  color: var(--text-soft);
+}
+
+.block-title {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line-strong);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+/* ---------- Card building blocks ---------- */
+
+.card-base {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+/* "Result" block used in experience, programs and projects */
+.results {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-strong);
+}
+.results p { margin: 0; color: var(--text); }
+
+.bullets li {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.78em;
+  width: 0.5rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chips li {
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.plain-list li {
+  padding-block: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+.plain-list li:last-child { border-bottom: 0; }
+.plain-list a { text-decoration: none; }
+.plain-list a:hover { color: var(--accent); text-decoration: underline; }
+
+/* ---------- Fade-in on scroll ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

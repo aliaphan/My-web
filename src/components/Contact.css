@@ -1,0 +1,80 @@
+.contact {
+  position: relative;
+  padding-block: var(--section-space);
+  overflow-x: clip;
+  background: var(--deep);
+  color: var(--text);
+  isolation: isolate;
+}
+
+.contact__flower {
+  position: absolute;
+  top: clamp(1.5rem, 4vw, 3rem);
+  right: clamp(-90px, -5vw, -40px);
+  z-index: -1;
+  width: clamp(130px, 18vw, 260px);
+  opacity: 0.9;
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: end;
+}
+
+.contact h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(3.25rem, 9vw, 7rem);
+  line-height: 0.95;
+}
+.contact h2 em { color: var(--accent); }
+
+.contact__lede {
+  max-width: 28rem;
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--text-soft);
+}
+
+.contact__list { margin: 0; border-top: 1px solid var(--line); }
+.contact__list div {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  padding-block: 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+.contact__list dt {
+  padding-top: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-soft);
+}
+.contact__list dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  overflow-wrap: anywhere;
+}
+.contact__list a {
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition: background-size 0.3s var(--ease);
+}
+.contact__list a:hover { background-size: 100% 1px; }
+
+@media (max-width: 900px) {
+  .contact__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .contact__flower {
+    top: 0.5rem;
+    right: -1.5rem;
+    width: 100px;
+  }
+  .contact__list div { grid-template-columns: 1fr; gap: 0.25rem; }
+}

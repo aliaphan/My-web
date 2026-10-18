@@ -1,0 +1,22 @@
+.site-footer {
+  padding-block: 1.75rem;
+  background: var(--deep);
+  border-top: 1px solid var(--line);
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+.site-footer p { margin: 0; }
+.site-footer .brand { color: var(--text); }
+.site-footer__top {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-footer__top:hover { color: var(--text); text-decoration: underline; }

@@ -1,0 +1,30 @@
+/* =========================================================================
+   Colors, fonts and spacing. Change a value here and it updates everywhere.
+   ========================================================================= */
+
+:root {
+  /* Palette: burgundy page, rose accents, warm white text */
+  --bg: #3B0A12;              /* page background */
+  --bg-alt: #300810;          /* every other section */
+  --surface: #4A1019;         /* cards */
+  --deep: #22050A;            /* header, footer, contact */
+  --text: #F7EDEE;
+  --text-soft: rgba(247, 237, 238, 0.74);
+  --accent: #F2A9B3;          /* italic words, labels, links */
+  --accent-hover: #FFD3D9;
+  --on-accent: #2A070D;       /* text on accent-colored buttons */
+  --line: rgba(247, 237, 238, 0.14);
+  --line-strong: rgba(247, 237, 238, 0.32);
+  --shadow: rgba(10, 0, 3, 0.45);
+
+  /* Typography */
+  --font-display: "Libre Baskerville", "Times New Roman", Times, Georgia, serif;
+  --font-body: "Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
+
+  /* Layout */
+  --nav-h: 56px;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --max: 1240px;
+  --section-space: clamp(4.5rem, 9vw, 8rem);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

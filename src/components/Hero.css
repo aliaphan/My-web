@@ -1,0 +1,121 @@
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(620px, calc(100svh - var(--nav-h)), 900px);
+  padding: 7rem var(--gutter);
+  overflow-x: clip;
+}
+
+.hero__oval {
+  position: absolute;
+  inset: 6% max(var(--gutter), calc(50% - 560px));
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero__center {
+  position: relative;
+  z-index: 2;
+  max-width: 46rem;
+  text-align: center;
+}
+
+.hero__title {
+  margin-bottom: 1.75rem;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.hero__title em { font-style: italic; color: var(--accent); }
+
+/* The tagline and the two lines under it share one size */
+.hero__tagline,
+.hero__meta {
+  margin: 0 auto 0.6rem;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.6;
+  text-wrap: balance;
+}
+.hero__tagline { margin-bottom: 1.1rem; font-weight: 500; color: var(--text); }
+.hero__meta { color: var(--text-soft); }
+.hero__recent { font-weight: 500; color: var(--accent); }
+/* Keeps each part of the "Recently" line together when it wraps */
+.hero__item { display: inline-block; }
+
+/* LinkedIn, Email and Résumé icons */
+.hero__links {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  margin-top: 2.25rem;
+}
+
+.icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+.icon-link__circle {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  transition: background-color 0.25s, color 0.25s;
+}
+.icon-link__circle svg { width: 22px; height: 22px; }
+.icon-link__label { font-size: 0.85rem; font-weight: 500; }
+.icon-link:hover .icon-link__circle,
+.icon-link:focus-visible .icon-link__circle { background: var(--accent); color: var(--on-accent); }
+
+.hero__flower {
+  position: absolute;
+  right: max(var(--gutter), calc(50% - 600px));
+  bottom: 5%;
+  width: clamp(150px, 15vw, 230px);
+  transform: rotate(-14deg);
+  filter: drop-shadow(0 18px 22px var(--shadow));
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    display: block;
+    min-height: 0;
+    padding: 4.5rem var(--gutter) 3rem;
+  }
+  .hero__center { max-width: 34rem; margin: 0 auto; }
+
+  /* On small screens the oval frames just the headline */
+  .hero__oval { display: none; }
+  .hero__title {
+    position: relative;
+    padding-block: 2.5rem;
+  }
+  .hero__title::before {
+    content: "";
+    position: absolute;
+    inset: 0 -1rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero__flower {
+    top: 0.75rem;
+    right: -1.25rem;
+    bottom: auto;
+    width: clamp(90px, 18vw, 140px);
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__title::before { inset: 0 -0.25rem; }
+}

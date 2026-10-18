@@ -1,0 +1,94 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--deep);
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: min(100% - 2 * var(--gutter), 1440px);
+  height: var(--nav-h);
+  margin-inline: auto;
+}
+
+.nav__links { display: flex; gap: 1.75rem; }
+
+.nav__links a,
+.nav__meta {
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.nav__links a,
+.nav__resume {
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.nav__links a:hover,
+.nav__resume:hover,
+.nav__links a[aria-current="true"] { opacity: 1; text-decoration: underline; }
+
+.nav__mobile-only { display: none; }
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand em { font-style: italic; color: var(--accent); }
+
+.nav__meta {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 1.75rem;
+}
+
+.nav__toggle {
+  display: none;
+  min-height: 44px;
+  padding: 0 0.25rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Below this width the menu links fold into the "Menu" button */
+@media (max-width: 1140px) {
+  .nav { grid-template-columns: 1fr auto; }
+  .brand { grid-column: 1; grid-row: 1; }
+  .nav__meta { grid-column: 2; grid-row: 1; }
+  .nav__resume { display: none; }
+  .nav__toggle { display: block; }
+
+  .nav__links {
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem var(--gutter) 1.5rem;
+    background: var(--deep);
+    border-top: 1px solid var(--line);
+  }
+  .site-header.is-open .nav__links { display: flex; }
+  .nav__links a {
+    display: block;
+    padding-block: 0.9rem;
+    border-bottom: 1px solid var(--line);
+    font-size: 1rem;
+  }
+  .nav__mobile-only { display: block; }
+}
