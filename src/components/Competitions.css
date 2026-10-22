@@ -5,6 +5,8 @@
   grid-template-columns: 1fr 1.1fr;
   background: var(--surface);
   border: 1px solid var(--line);
+  border-radius: var(--petal);
+  overflow: hidden;
   box-shadow: 0 30px 60px -40px var(--shadow);
 }
 

@@ -21,6 +21,9 @@
   --font-display: "Libre Baskerville", "Times New Roman", Times, Georgia, serif;
   --font-body: "Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
 
+  /* Card shape: top-left and bottom-right rounded like a petal */
+  --petal: clamp(1.75rem, 4vw, 3rem) 0.4rem clamp(1.75rem, 4vw, 3rem) 0.4rem;
+
   /* Layout */
   --nav-h: 56px;
   --gutter: clamp(1rem, 4vw, 3rem);

@@ -22,7 +22,6 @@ export const content: SiteContent = {
     chips: [
       { figure: '2nd of 9', text: 'CFA Research Challenge' },
       { figure: '700+', text: 'records a month at 98% accuracy' },
-      { figure: '$282K', text: 'fund covered as a utilities analyst' },
       { figure: '3.74', text: 'GPA · Dean’s List' },
     ],
   },
