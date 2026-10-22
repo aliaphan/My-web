@@ -41,9 +41,24 @@
 }
 .hero__tagline { margin-bottom: 1.1rem; font-weight: 500; color: var(--text); }
 .hero__meta { color: var(--text-soft); }
-.hero__recent { font-weight: 500; color: var(--accent); }
-/* Keeps each part of the "Recently" line together when it wraps */
-.hero__item { display: inline-block; }
+
+/* Highlight pills under the intro */
+.hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1.5rem auto 0;
+}
+.chip {
+  padding: 0.4rem 0.95rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text-soft);
+}
+.chip strong { font-weight: 600; color: var(--accent); }
 
 /* LinkedIn, Email and Résumé icons */
 .hero__links {

@@ -7,28 +7,25 @@ export interface DocLink {
   ariaLabel?: string
 }
 
-/** "Result" text: either a paragraph, or a list of big numbers with a sentence each. */
-export type Result =
-  | { label?: string; text: string }
-  | { label?: string; highlights: { figure: string; text: string }[] }
+/** A big number with a few words of context, e.g. "700+" + "records a month". */
+export interface Stat {
+  figure: string
+  text: string
+}
 
 export interface Job {
   dates: string
   org: string
   role: string
-  /** Extra roles shown as a small table (used for campus jobs). */
-  subRoles?: { title: string; dates: string }[]
-  /** A paragraph, or a list of bullet points. */
-  did: string | string[]
-  result: Result
+  summary: string
+  stats: Stat[]
 }
 
 export interface Program {
   dates: string
   title: string
   role: string
-  did?: string
-  result?: Result
+  summary: string
   link?: DocLink
 }
 
@@ -37,7 +34,6 @@ export interface FeaturedProgram {
   title: string
   titleAccent: string
   role: string
-  did: string
   result: string
   image: { src: string; alt: string; width: number; height: number }
   badge: { number: string; suffix: string }
@@ -50,7 +46,7 @@ export interface Project {
   title: string
   titleAccent: string
   role: string
-  did: string
+  /** One line: what you found or recommended. */
   result: string
   link?: DocLink
   /** Set to true to keep a project off the site without deleting it. */
@@ -72,7 +68,7 @@ export interface ContactLink {
 }
 
 export interface SiteContent {
-  hero: { title: ReactNode; tagline: string; meta: string; recently: string[] }
+  hero: { title: ReactNode; tagline: string; meta: string; chips: Stat[] }
   about: { intro: ReactNode; body: ReactNode[] }
   jobs: Job[]
   featured: FeaturedProgram

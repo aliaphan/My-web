@@ -1,6 +1,5 @@
 import { content } from '../data/content'
 import type { Project } from '../data/types'
-import { ResultBlock } from './ResultBlock'
 import { SectionHead } from './SectionHead'
 import './Projects.css'
 
@@ -17,9 +16,7 @@ function ProjectCard({ project, num }: { project: Project; num: number }) {
         {project.title} <em>{project.titleAccent}</em>
       </h3>
       <p className="project__role">{project.role}</p>
-      <h4 className="mini-label">What I did</h4>
-      <p>{project.did}</p>
-      <ResultBlock result={{ text: project.result }} />
+      <p className="project__result">{project.result}</p>
       {project.link && (
         <a
           className="link-arrow project__link"

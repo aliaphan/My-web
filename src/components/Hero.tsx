@@ -16,15 +16,14 @@ export function Hero() {
         <h1 className="hero__title">{hero.title}</h1>
         <p className="hero__tagline">{hero.tagline}</p>
         <p className="hero__meta">{hero.meta}</p>
-        <p className="hero__meta">
-          {hero.recently.map((item, i) => (
-            <span className="hero__item" key={item}>
-              {i === 0 && <span className="hero__recent">Recently: </span>}
-              {item}
-              {i < hero.recently.length - 1 && ' ·'}{' '}
-            </span>
+
+        <ul className="hero__chips" aria-label="Highlights">
+          {hero.chips.map((chip) => (
+            <li className="chip" key={chip.figure}>
+              <strong>{chip.figure}</strong> {chip.text}
+            </li>
           ))}
-        </p>
+        </ul>
 
         <ul className="hero__links">
           {heroLinks.map((link) => (

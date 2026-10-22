@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   padding-bottom: 0.9rem;
   border-bottom: 1px solid var(--line);
 }
@@ -30,58 +30,29 @@
   font-size: 1.05rem;
   color: var(--accent);
 }
-
-.entry__body {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: clamp(1.5rem, 3vw, 2.75rem);
-  align-items: start;
-  margin-top: 1.75rem;
-}
-.entry__body p { margin: 0; color: var(--text-soft); }
-.entry__body .results { margin-top: 0; padding-top: 0; border-top: 0; }
-.entry__body .results p { color: var(--text); }
-
-.results__list li {
-  padding-block: 0.65rem;
-  border-bottom: 1px solid var(--line);
-  font-size: 0.97rem;
-  line-height: 1.5;
-}
-.results__list li:first-child { padding-top: 0; }
-.results__list li:last-child { padding-bottom: 0; border-bottom: 0; }
-.results__list strong {
-  margin-right: 0.15em;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 400;
-  color: var(--accent);
-}
-
-.role-list {
-  max-width: 34rem;
-  margin-top: 1.25rem;
-  border-top: 1px solid var(--line);
-}
-.role-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-block: 0.6rem;
-  border-bottom: 1px solid var(--line);
-  font-size: 0.97rem;
-}
-.role-list span:last-child {
-  font-size: 0.85rem;
-  line-height: 1.8;
-  white-space: nowrap;
+.entry__summary {
+  max-width: 44rem;
+  margin: 1.1rem 0 0;
   color: var(--text-soft);
 }
 
-@media (max-width: 900px) {
-  .entry__body { grid-template-columns: 1fr; }
+/* Big numbers in a row */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
-
-@media (max-width: 760px) {
-  .role-list li { flex-direction: column; gap: 0; }
+.stats strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--accent);
 }

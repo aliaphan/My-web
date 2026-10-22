@@ -13,7 +13,7 @@ website/
 │   ├── data/content.tsx     ← ALL the words on the site (edit this most)
 │   ├── data/types.ts        ← the shape of that content
 │   ├── components/          ← one file per section (Hero, About, Projects…) + its CSS
-│   ├── hooks/               ← fade-in on scroll, menu underline
+│   ├── hooks/               ← fade-in on scroll, menu underline, flower trail behind the mouse
 │   └── styles/tokens.css    ← colors and fonts
 ├── vercel.json              ← tells Vercel how to build the site
 └── package.json             ← project scripts and libraries
@@ -49,7 +49,9 @@ Open <http://localhost:5173>. The page updates as soon as you save a file. Press
 |---|---|
 | Change a sentence | Open `src/data/content.tsx`, find the sentence (**⌘ + F**), edit the text between the quotes |
 | Make words bold or accent-colored | In `content.tsx`, wrap them in `<strong>…</strong>` (bold) or `<em>…</em>` (italic, accent color) |
-| Add a project | In `content.tsx`, copy one whole `{ kind: …, title: …, … },` block in `projects`, paste it below, and change the text. Put its PDF in `public/files/` and set `link.href` to `'/files/Your-File.pdf'` |
+| Add a project | In `content.tsx`, copy one whole `{ kind: …, title: …, … },` block in `projects`, paste it below, and change the text (keep `result` to one line). Put its PDF in `public/files/` and set `link.href` to `'/files/Your-File.pdf'` |
+| Change the number pills under my name | In `content.tsx`, edit `hero.chips` (a big `figure` plus a few words) |
+| Change or remove the flowers behind the mouse | Edit `src/hooks/useFlowerTrail.ts` (size, blur, how many), or delete the `useFlowerTrail()` line in `src/App.tsx` to turn them off |
 | Show the ASC 606 project | In `content.tsx`, search `ASC 606`, write a real result, and delete the `hidden: true,` line |
 | Update my résumé | Replace `public/files/Alia-Phan-Resume.pdf` with a new PDF of the **same name** |
 | Change the photo | Replace `public/images/alia-phan.jpg` with a new photo of the **same name** |

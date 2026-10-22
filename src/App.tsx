@@ -7,10 +7,12 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
+import { useFlowerTrail } from './hooks/useFlowerTrail'
 import { useReveal } from './hooks/useReveal'
 
 export default function App() {
   useReveal()
+  useFlowerTrail()
 
   return (
     <>

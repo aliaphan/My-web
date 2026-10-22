@@ -1,6 +1,5 @@
 import { content } from '../data/content'
 import type { Program } from '../data/types'
-import { ResultBlock } from './ResultBlock'
 import { SectionHead } from './SectionHead'
 import './Competitions.css'
 
@@ -23,10 +22,7 @@ function FeaturedCard() {
         </h3>
         <p className="feature__role">{featured.role}</p>
 
-        <h4 className="mini-label">What I did</h4>
-        <p>{featured.did}</p>
-
-        <ResultBlock result={{ text: featured.result }} />
+        <p className="feature__result">{featured.result}</p>
 
         <div className="feature__actions">
           <a className="btn btn--primary" href={featured.primaryLink.href} target="_blank" rel="noopener">
@@ -47,13 +43,7 @@ function ProgramCard({ program }: { program: Program }) {
       <p className="card__date">{program.dates}</p>
       <h3 className="card__title">{program.title}</h3>
       <p className="card__role">{program.role}</p>
-      {program.did && (
-        <>
-          <h4 className="mini-label">What I did</h4>
-          <p>{program.did}</p>
-        </>
-      )}
-      {program.result && <ResultBlock result={program.result} />}
+      <p className="card__summary">{program.summary}</p>
       {program.link && (
         <a className="link-arrow card__link" href={program.link.href} target="_blank" rel="noopener">
           {program.link.label}

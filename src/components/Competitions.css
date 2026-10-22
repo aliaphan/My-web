@@ -43,14 +43,14 @@
 
 .feature__body { padding: clamp(1.75rem, 4vw, 3.25rem); }
 .feature__body > .label { margin-bottom: 1rem; color: var(--text-soft); }
-.feature__body > p:not(.label):not(.feature__role) { color: var(--text-soft); }
+.feature__result { margin: 0; font-size: 1.05rem; color: var(--text); }
 
 .feature__title {
   margin-bottom: 0.6rem;
   font-size: clamp(1.9rem, 3vw, 2.5rem);
 }
 .feature__title em { color: var(--accent); }
-.feature__role { margin-bottom: 1.5rem; color: var(--accent); }
+.feature__role { margin-bottom: 1.25rem; color: var(--accent); }
 
 .feature__actions {
   display: flex;
@@ -77,8 +77,8 @@
   color: var(--text-soft);
 }
 .card__title { margin-bottom: 0.4rem; font-size: clamp(1.5rem, 2.2vw, 1.85rem); }
-.card__role { margin-bottom: 1.25rem; color: var(--accent); }
-.card > p:not(.card__date):not(.card__role) { margin: 0; font-size: 0.97rem; color: var(--text-soft); }
+.card__role { margin-bottom: 1rem; color: var(--accent); }
+.card__summary { margin: 0; font-size: 0.97rem; color: var(--text-soft); }
 .card__link { align-self: flex-start; margin-top: auto; padding-top: 1.25rem; }
 
 /* ---------- Recognition ---------- */

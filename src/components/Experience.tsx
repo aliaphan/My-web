@@ -1,6 +1,5 @@
 import { content } from '../data/content'
 import type { Job } from '../data/types'
-import { ResultBlock } from './ResultBlock'
 import { SectionHead } from './SectionHead'
 import './Experience.css'
 
@@ -11,37 +10,16 @@ function JobEntry({ job, num }: { job: Job; num: number }) {
         <p className="entry__num">{String(num).padStart(2, '0')}</p>
         <p className="entry__date">{job.dates}</p>
       </div>
-      <div className="entry__main">
-        <h3 className="entry__org">{job.org}</h3>
-        <p className="entry__role">{job.role}</p>
-
-        {job.subRoles && (
-          <ul className="role-list">
-            {job.subRoles.map((sub) => (
-              <li key={sub.title}>
-                <span>{sub.title}</span>
-                <span>{sub.dates}</span>
-              </li>
-            ))}
-          </ul>
-        )}
-
-        <div className="entry__body">
-          <div>
-            <h4 className="mini-label">What I did</h4>
-            {Array.isArray(job.did) ? (
-              <ul className="bullets">
-                {job.did.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            ) : (
-              <p>{job.did}</p>
-            )}
-          </div>
-          <ResultBlock result={job.result} />
-        </div>
-      </div>
+      <h3 className="entry__org">{job.org}</h3>
+      <p className="entry__role">{job.role}</p>
+      <p className="entry__summary">{job.summary}</p>
+      <ul className="stats">
+        {job.stats.map((stat) => (
+          <li key={stat.figure}>
+            <strong>{stat.figure}</strong> {stat.text}
+          </li>
+        ))}
+      </ul>
     </article>
   )
 }

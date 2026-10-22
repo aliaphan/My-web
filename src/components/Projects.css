@@ -40,12 +40,8 @@
 
 .project__title { margin-bottom: 0.5rem; font-size: clamp(1.6rem, 2.4vw, 2rem); }
 .project__title em { color: var(--accent); }
-.project__role { margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--accent); }
-.project > p:not(.project__top):not(.project__role) {
-  margin: 0;
-  font-size: 0.97rem;
-  color: var(--text-soft);
-}
+.project__role { margin-bottom: 1rem; font-size: 0.95rem; color: var(--accent); }
+.project__result { margin: 0; font-size: 0.97rem; color: var(--text); }
 .project__link { align-self: flex-start; margin-top: auto; padding-top: 1.25rem; }
 
 @media (max-width: 760px) {
