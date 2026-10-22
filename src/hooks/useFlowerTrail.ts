@@ -5,11 +5,16 @@ const PETALS = ['/images/petals/hibiscus.png', '/images/petals/dahlia.png', '/im
 const SPAWN_DISTANCE = 26 // px the mouse must travel before another flower appears
 const MAX_FLOWERS = 36 // cap so the page stays smooth
 
+// Anything that holds readable words. No flowers appear while the mouse is over these.
+const TEXT_SELECTOR = 'p, h1, h2, h3, h4, li, dt, dd, a, button, strong, em, span, figcaption, label'
+
 const rand = (min: number, max: number) => min + Math.random() * (max - min)
 
 /**
  * Small, slightly blurry flowers drift out behind the mouse and fade away.
- * Skipped for touch screens and for visitors who prefer reduced motion.
+ * They stay off the words: nothing appears while the mouse is over text, or while
+ * someone is holding the button or has text selected. Skipped for touch screens and
+ * for visitors who prefer reduced motion.
  */
 export function useFlowerTrail() {
   useEffect(() => {
@@ -50,13 +55,13 @@ export function useFlowerTrail() {
       const spin = rand(-120, 120)
       const animation = flower.animate(
         [
-          { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: 0.85 },
+          { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: 0.8 },
           {
-            transform: `translate(${rand(-18, 18)}px, ${rand(24, 52)}px) rotate(${spin}deg) scale(0.5)`,
+            transform: `translate(${rand(-10, 10)}px, ${rand(10, 24)}px) rotate(${spin}deg) scale(0.5)`,
             opacity: 0,
           },
         ],
-        { duration: rand(900, 1400), easing: 'ease-out' },
+        { duration: rand(700, 1100), easing: 'ease-out' },
       )
       animation.onfinish = () => {
         flower.remove()
@@ -67,6 +72,12 @@ export function useFlowerTrail() {
     const onMove = (event: PointerEvent) => {
       if (event.pointerType !== 'mouse' || reduceMotion.matches) return
       if (alive >= MAX_FLOWERS) return
+      // Holding the button down usually means selecting text
+      if (event.buttons !== 0) return
+      const selection = window.getSelection()
+      if (selection && !selection.isCollapsed) return
+      // Never draw over words
+      if (event.target instanceof Element && event.target.closest(TEXT_SELECTOR)) return
       if (Math.hypot(event.clientX - lastX, event.clientY - lastY) < SPAWN_DISTANCE) return
       lastX = event.clientX
       lastY = event.clientY
